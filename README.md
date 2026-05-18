@@ -66,6 +66,13 @@ export default defineConfig([
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
+Demo Credentials
+
+Admin Login
+
+Email: aditya@gmail.com
+
+Password:123456
       // other options...
     },
   },
