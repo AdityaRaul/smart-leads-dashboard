@@ -66,6 +66,12 @@ export default defineConfig([
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
+
+      // other options...
+    },
+  },
+])
+```
 Demo Credentials
 
 Admin Login
@@ -73,8 +79,3 @@ Admin Login
 Email: aditya@gmail.com
 
 Password:123456
-      // other options...
-    },
-  },
-])
-```
