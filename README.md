@@ -1,81 +1,228 @@
-# React + TypeScript + Vite
+# Smart Leads Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Full Stack Lead Management Dashboard built using React, TypeScript, Node.js, Express, MongoDB, JWT Authentication, and TailwindCSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Features Implemented
 
-## React Compiler
+## Authentication
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* User Registration
+* User Login
+* JWT Authentication
+* Protected Routes
+* Logout Functionality
 
-## Expanding the ESLint configuration
+## Lead Management
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Add Lead
+* Edit Lead
+* Delete Lead
+* Fetch Leads
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Dashboard Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* Debounced Search
+* Status Filter
+* Source Filter
+* Sorting (Latest/Oldest)
+* Pagination
+* CSV Export
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Additional Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* Role-Based Access Control (Admin/Sales)
+* Loading States
+* Error Handling
+* Responsive UI
+* Environment Variable Support
+* Docker Setup
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
+# Tech Stack
 
-      // other options...
-    },
-  },
-])
-```
-Demo Credentials
+## Frontend
+
+* React
+* TypeScript
+* TailwindCSS
+* Axios
+* React CSV
+
+## Backend
+
+* Node.js
+* Express.js
+* TypeScript
+* MongoDB
+* Mongoose
+* JWT
+* bcryptjs
+
+---
+
+# Folder Structure
+
+client/
+
+* components/
+* pages/
+* layouts/
+* services/
+
+server/
+
+* controllers/
+* routes/
+* models/
+* middleware/
+* config/
+
+---
+
+# Demo Credentials
 
 Admin Login
 
 Email: aditya@gmail.com
 
-Password:123456
+Password: 123456
+
+---
+
+# Frontend Setup
+
+cd client
+
+npm install
+
+npm run dev
+
+---
+
+# Backend Setup
+
+cd server
+
+npm install
+
+npm run dev
+
+---
+
+# Environment Variables
+
+Create `.env` inside server folder:
+
+PORT=5000
+
+MONGO_URI=your_mongodb_uri
+
+JWT_SECRET=your_secret_key
+
+---
+
+# API Documentation
+
+## Authentication APIs
+
+### Register User
+
+POST /api/auth/register
+
+Request Body:
+
+{
+"name": "Aditya",
+"email": "[aditya@test.com](mailto:aditya@test.com)",
+"password": "123456",
+"role": "admin"
+}
+
+---
+
+### Login User
+
+POST /api/auth/login
+
+Request Body:
+
+{
+"email": "[admin@test.com](mailto:admin@test.com)",
+"password": "admin123"
+}
+
+---
+
+## Lead APIs
+
+### Get All Leads
+
+GET /api/leads
+
+---
+
+### Create Lead
+
+POST /api/leads
+
+Request Body:
+
+{
+"name": "Rahul",
+"email": "[rahul@gmail.com](mailto:rahul@gmail.com)",
+"status": "Qualified",
+"source": "Instagram"
+}
+
+---
+
+### Update Lead
+
+PUT /api/leads/:id
+
+---
+
+### Delete Lead
+
+DELETE /api/leads/:id
+
+---
+
+# Docker Setup
+
+Dockerfile added inside server folder.
+
+---
+
+# Deployment
+
+Frontend can be deployed on:
+
+* Vercel
+
+Backend can be deployed on:
+
+* Render
+
+MongoDB:
+
+* MongoDB Atlas
+
+---
+
+# Evaluation Features Covered
+
+* TypeScript Usage
+* Proper Folder Structure
+* Validation
+* Reusable Components
+* API Design
+* Loading/Error States
+* Debounced Search
+* CSV Export
+* Role-Based Access Control
+* Scalability
+* Responsive UI
