@@ -191,11 +191,7 @@ DELETE /api/leads/:id
 
 ---
 
-# Docker Setup
 
-Dockerfile added inside server folder.
-
----
 
 # Deployment
 
