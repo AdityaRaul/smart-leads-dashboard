@@ -226,3 +226,12 @@ MongoDB:
 * Role-Based Access Control
 * Scalability
 * Responsive UI
+
+# Demo Video
+
+Click below to watch the project demo recording:
+
+
+
+https://github.com/user-attachments/assets/5430eb7c-a10e-48d2-8879-7cca4fe6fb1b
+
